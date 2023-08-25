@@ -1,0 +1,94 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+PodologosBrasilFront/dist
+PodologosBrasilFront/tmp
+PodologosBrasilFront/out-tsc
+# Only exists if Bazel was run
+PodologosBrasilFront/bazel-out
+
+# depencies
+PodologosBrasilFront/node_modules
+
+# profiling files
+PodologosBrasilFront/chrome-profiler-events*.json
+PodologosBrasilFront/speed-measure-plugin*.json
+
+# IDEs and editors
+.idea
+PodologosBrasilFront/.project
+PodologosBrasilFront/.classpath
+PodologosBrasilFront/.c9/
+PodologosBrasilFront/*.launch
+PodologosBrasilFront/.settings/
+PodologosBrasilFront/*.sublime-workspace
+
+# IDE - VSCode
+PodologosBrasilFront/.vscode/*
+!PodologosBrasilFront/.vscode/settings.json
+!PodologosBrasilFront/.vscode/tasks.json
+!PodologosBrasilFront/.vscode/launch.json
+!PodologosBrasilFront/.vscode/extensions.json
+PodologosBrasilFront/.history/*
+
+# misc
+PodologosBrasilFront/.sass-cache
+PodologosBrasilFront/connect.lock
+PodologosBrasilFront/coverage
+PodologosBrasilFront/libpeerconnection.log
+PodologosBrasilFront/npm-debug.log
+PodologosBrasilFront/yarn-error.log
+PodologosBrasilFront/testem.log
+PodologosBrasilFront/typings
+
+# System Files
+PodologosBrasilFront/.DS_Store
+PodologosBrasilFront/Thumbs.db
+
+PodologosBrasilBack/*.swp
+PodologosBrasilBack/*.*~
+PodologosBrasilBack/project.lock.json
+PodologosBrasilBack/.DS_Store
+PodologosBrasilBack/*.pyc
+PodologosBrasilBack/nupkg/
+
+# Visual Studio Code
+PodologosBrasilBack/.vscode
+
+# Rider
+PodologosBrasilBack/.idea
+
+# User-specific files
+PodologosBrasilBack/*.suo
+PodologosBrasilBack/*.user
+PodologosBrasilBack/*.userosscache
+PodologosBrasilBack/*.sln.docstates
+
+# Build results
+PodologosBrasilBack/debug/
+PodologosBrasilBack/debugPublic/
+PodologosBrasilBack/release/
+PodologosBrasilBack/releases/
+PodologosBrasilBack/Debug/
+PodologosBrasilBack/DebugPublic/
+PodologosBrasilBack/Release/
+PodologosBrasilBack/Releases/
+PodologosBrasilBack/x64/
+PodologosBrasilBack/x86/
+PodologosBrasilBack/build/
+PodologosBrasilBack/bld/
+PodologosBrasilBack/bin/
+PodologosBrasilBack/obj/
+PodologosBrasilBack/out/
+PodologosBrasilBack/Bin/
+PodologosBrasilBack/Obj/
+PodologosBrasilBack/Out/
+PodologosBrasilBack/msbuild.log
+PodologosBrasilBack/msbuild.err
+PodologosBrasilBack/msbuild.wrn
+
+# Visual Studio 2015
+PodologosBrasilBack/.vs/
+
+.DS_Store
+Thumbs.db
