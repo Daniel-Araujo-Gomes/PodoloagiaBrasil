@@ -1,0 +1,21 @@
+<div class="_bodyLogin">
+  <nav class="bg-teal d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center justify-content-start m-0 pb-1">
+            <button type="button" class="btn p-0 border border-0" *ngIf="subTela" (click)="navigate('login/acesso')">
+              <p class="mb-0 text-white fs-6 ms-1"><i class="fa-solid fa-chevron-left text-white ms-2 me-1"></i>Voltar</p>
+            </button>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <i class="text-white fa-solid fa-shoe-prints fs-1 me-1 _rotate-275"></i>
+            <p class="text-white mb-0 _fse-1 fw-bolder">Podólogos Brasil</p>
+          </div>
+          <p class="text-white text-center fs-6 m-0">Os melhores profissionais estão aqui!</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main><router-outlet></router-outlet></main>
+</div>

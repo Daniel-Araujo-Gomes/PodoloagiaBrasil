@@ -1,0 +1,10 @@
+$component-name: 'main';
+
+#{$component-name} {
+  grid-area: main;
+  border-top: 1px solid $gray-500;
+  border-bottom: 1px solid $gray-500;
+  overflow: auto;
+  padding: 10px;
+  background-color: $main-bg;
+}

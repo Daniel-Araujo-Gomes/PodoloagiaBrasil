@@ -1,0 +1,42 @@
+$component-name: "_menu-user";
+
+.#{$component-name} {
+  grid-area: menuUser;
+  width: 100%;
+  overflow: hidden;
+}
+
+._size-icon {
+  font-size: 26px;
+}
+
+._size-name-user {
+  margin-top: 5px;
+  font-size: 18px;
+  color: $teal-700;
+}
+
+._menu-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $gray-200;
+  justify-content: center;
+}
+
+._card-image {
+  position: relative;
+  height: 70px !important;
+  width: 70px !important;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 2px;
+}
+
+._card-image ._card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid $teal;
+}

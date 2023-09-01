@@ -1,0 +1,125 @@
+$component-name: '_card';
+
+.#{$component-name} {
+
+  background-color: $white;
+  border-color: $card-border;
+  border-style: none;
+  border-width: 0px;
+  border-radius: 5px;
+  border-left: 8px solid;
+  box-shadow: 0 6px 10px -4px $box-shadow;
+  margin-bottom: 20px !important;
+  padding: 10px;
+
+  &._border-left-primary { border-left-color: $primary !important }
+
+  &._border-left-secondary { border-left-color: $secondary !important }
+
+  &._border-left-success { border-left-color: $success !important }
+
+  &._border-left-info { border-left-color: $info !important }
+
+  &._border-left-warning { border-left-color: $warning !important }
+
+  &._border-left-danger { border-left-color: $danger !important }
+
+  &._border-left-light { border-left-color: $light !important }
+
+  &._border-left-dark { border-left-color: $dark !important }
+
+  & > div:first-child {
+    padding-left: 0px !important;
+  }
+
+  & > div {
+    background-color: $white;
+    padding-right: 0px !important;
+    padding-left: 10px !important;
+  }
+
+  & > div:not(:first-child) {
+    border-left: solid 1px $gray-300;
+    @media (max-width: 575.98px) { border-left: none;}
+  }
+
+  & > div:not(:last-child) {
+    @media (max-width: 575.98px) { border-bottom: solid 1px $gray-300; margin-bottom: 10px; }
+  }
+
+  & > div > ._fontIcon {
+    width: 60px;
+
+    & > fa-icon{
+      font-size: 54px;
+      @media (max-width: 767.98px) { font-size: 44px; }
+      @media (max-width: 575.98px) { font-size: 34px; }
+    }
+
+  }
+
+  & > div > ._fontDescricao > P > br {
+    @media (max-width: 767.98px) { display: none !important; }
+    @media (max-width: 575.98px) { display: none !important; }
+  }
+
+  & > footer {
+    border-top: solid 1px $gray-300;
+    color: $gray-500;
+  }
+
+  & > h5._subTitle {
+    color: $gray-500;
+  }
+
+  & > main {
+    border: 0;
+    background-color: transparent !important;
+  }
+
+  &._lista {
+    display: grid !important;
+    height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    grid-template-columns: auto;
+    grid-template-rows: 65px auto 56px;
+    grid-template-areas:
+      "card-header"
+      "card-main"
+      "card-footer";
+
+      & > header {
+        grid-area: card-header;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      & > main {
+        grid-area: card-main;
+        overflow: auto;
+        border: none !important;
+        background-color: transparent !important;
+        padding: 0;
+      }
+
+      & > footer {
+        grid-area: card-footer;
+        padding: 0;
+        margin: 0;
+        width: 100% !important;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0;
+      }
+  }
+}
+
+$component-name: '_card-chart';
+
+.#{$component-name} {
+  min-height: 300px;
+}

@@ -1,0 +1,10 @@
+$component-name: 'footer';
+
+#{$component-name} {
+  grid-area: footer;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 12px;
+  background-color: $white;
+  color: $black;
+}

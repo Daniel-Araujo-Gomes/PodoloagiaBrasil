@@ -1,0 +1,34 @@
+<div class="_body">
+  <div id="sidenav" class="_sidenav">
+    <!--Usuário-->
+    <div class="_menu-user">
+      <div class="_card-image">
+        <img class="m-0 text-primary _card-img" src="../../assets/images/profile-pic1.jpg" />
+      </div>
+      <span class="ms-3 _reticencia _size-name-user fw-bolder">{{ user }}</span>
+    </div>
+
+    <div class="_menu-lateral" (click)="onMenuLateralHide()">
+      <ul class="nav flex-column">
+        <menus [menus]="menusData"></menus>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-teal" (click)="onMenuLateralHide()">
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <div class="d-flex align-items-center justify-content-start">
+        <button type="button" class="btn btn-outline-success ms-2 border border-0" (click)="onMenuLateralShow($event)">
+          <i class="fa-solid fa-bars text-white"></i>
+        </button>
+        <div class="navbar-brand text-white ms-2 _poiter fw-bolder" (click)="navigate('mu/home')">Podólogos Brasil</div>
+      </div>
+      <i class="fa-solid fa-shoe-prints text-white sf-6 me-2 _rotate-275"></i>
+    </div>
+  </nav>
+
+  <main (click)="onMenuLateralHide()"><router-outlet></router-outlet></main>
+  <footer class="d-flex align-items-center ps-3 bg-teal" (click)="onMenuLateralHide()">{{ footer }}</footer>
+</div>
+
+<app-load-screen [showLoadScreen]="LoadScreen"></app-load-screen>

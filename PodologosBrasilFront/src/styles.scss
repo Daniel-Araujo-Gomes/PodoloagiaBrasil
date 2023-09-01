@@ -1,1 +1,789 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/style/base/color";
+@import "assets/style/base/common";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "assets/style/component/card";
+@import "assets/style/component/inputFilter";
+@import "assets/style/component/menuLateral";
+@import "assets/style/component/menuUser";
+@import "assets/style/component/sidenav";
+@import "assets/style/component/table";
+@import "assets/style/component/input";
+@import "assets/style/component/checkbox";
+@import "assets/style/layout/footer";
+@import "assets/style/layout/header";
+@import "assets/style/layout/main";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+*:focus {
+  outline: none !important;
+  text-shadow: 0 0 0 #000;
+}
+
+._fs-22 {
+  font-size: 22px;
+}
+
+._checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 45px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+._checkbox:checked {
+  background-color: #3498db;
+}
+
+._checkbox::before {
+  content: " ";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  top: 4px;
+  left: 4px;
+  transition: 0.3s linear;
+}
+._checkbox:checked::before {
+  left: 29px;
+}
+
+.accordions {
+  width: 100%;
+  margin: 0 auto;
+}
+.accordion-item:not(:first-of-type) {
+  border-top: solid 1px #e9ecef !important;
+}
+.accordion-item input {
+  display: none;
+}
+.accordion-item label {
+  display: block;
+  cursor: pointer;
+}
+.accordion-content {
+  overflow: hidden;
+  padding-left: 10px;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  -ms-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+
+  & button {
+    border-top: solid 1px #e9ecef !important;
+  }
+}
+[id^="accordion"]:not(:checked) ~ .accordion-content {
+  height: 0;
+}
+
+.tab-active-centro-custo {
+  & > h5 {
+    color: $red !important;
+  }
+  & > fa-icon {
+    color: $red !important;
+  }
+}
+
+.tab-active-centro-lucro {
+  & > h5 {
+    color: $green !important;
+  }
+  & > fa-icon {
+    color: $green !important;
+  }
+}
+
+.tad-content-active {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.tad-content {
+  display: none;
+}
+
+//dynamic-form
+
+#dynamic-form .remove_field {
+  max-height: 38px;
+}
+
+#dynamic-form .pointer {
+  cursor: pointer;
+}
+
+#dynamic-form .move {
+  cursor: move;
+}
+
+#dynamic-form .moveElement:hover {
+  cursor: move;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+  /*-moz-transform: rotate(-0.2deg);
+  -webkit-transform: rotate(-0.2deg);
+  -o-transform: rotate(-0.2deg);
+  -ms-transform: rotate(-0.2deg);
+  transform: rotate(-0.2deg);*/
+}
+
+#dynamic-form #target .form-group {
+  padding: 5px !important;
+}
+
+#dynamic-form .datepicker {
+  padding: 11px;
+}
+
+#dynamic-form .dropdown-menu {
+  color: #38628d;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+#dynamic-form .checkbox {
+  float: right;
+  margin-left: 5px;
+  appearance: unset;
+  -webkit-appearance: unset;
+  position: relative;
+  width: 45px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+#dynamic-form .checkbox:checked {
+  background-color: #3498db;
+}
+
+#dynamic-form .checkbox:checked::before {
+  left: 29px;
+}
+
+#dynamic-form .checkbox::before {
+  content: " ";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  top: 4px;
+  left: 4px;
+  transition: 0.3s linear;
+}
+
+#dynamic-form fieldset {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#dynamic-form .navbar-brand img {
+  max-height: 52px;
+}
+
+#dynamic-form .inputError {
+  border: 1px solid #dc3545 !important;
+}
+
+#dynamic-form label.error {
+  font-size: small;
+  color: red;
+}
+
+#dynamic-form label#label-error.error {
+  font-size: small;
+  color: red;
+}
+
+#dynamic-form .modal-confirm {
+  color: #636363;
+  width: 325px;
+  font-size: 14px;
+}
+
+#dynamic-form .modal-confirm .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+#dynamic-form .modal-confirm .modal-header {
+  border-bottom: none;
+  position: relative;
+}
+
+#dynamic-form .modal-confirm h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 10px 0 -15px;
+}
+
+#dynamic-form .modal-confirm .form-control,
+.modal-confirm .btn {
+  min-height: 40px;
+  border-radius: 3px;
+}
+
+#dynamic-form .modal-confirm .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+#dynamic-form .modal-confirm .modal-footer {
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+#dynamic-form .modal-confirm .icon-box {
+  color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #82ce34;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+#dynamic-form .modal-confirm .icon-box i {
+  font-size: 58px;
+  position: relative;
+  top: 3px;
+}
+
+#dynamic-form .modal-confirm.modal-dialog {
+  margin-top: 80px;
+}
+
+#dynamic-form .modal-confirm .btn {
+  color: #fff;
+  border-radius: 4px;
+  background: #82ce34;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border: none;
+}
+
+#dynamic-form .modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+  background: #6fb32b;
+  outline: none;
+}
+
+#dynamic-form .trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+#dynamic-form .btn-outline-primary {
+  color: #009fdf !important;
+  border-color: #009fdf !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#dynamic-form .btn-outline-primary:hover {
+  background-color: #009fdf !important;
+  color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#dynamic-form .btn-primary {
+  background-color: #009fdf;
+  border-color: #009fdf;
+}
+
+#dynamic-form legend {
+  padding-top: 38px;
+  margin-bottom: 0;
+  color: #009fdf;
+}
+
+#dynamic-form hr {
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-top: 1px solid #009fdf;
+}
+
+#dynamic-form label h4 {
+  color: black;
+}
+
+#dynamic-form fieldset {
+  border-left-color: #21b2f0;
+  background: #ffffff;
+}
+
+#dynamic-form .container-form1 {
+  background-color: #ffffff;
+  margin: 30px 0px !important;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 0px !important;
+  border-left: solid 5px #00b5d3 !important;
+  box-shadow: 0 2px 10px -1px #bdbdbd;
+}
+
+#dynamic-form textarea.form-control {
+  height: 86px;
+}
+
+#dynamic-form #target input[type$="file"] {
+  padding: 0px;
+}
+
+#dynamic-form #target input[type$="file"]:before {
+  content: "Arquivo";
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  background-color: #e9ecef;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+}
+
+/*.divMaskModel{*/
+/*    position: relative; */
+/*    margin: 30px; */
+/*    display: inline-block;*/
+/*}*/
+
+#dynamic-form .divMaskModel:hover .dicaTexto {
+  visibility: visible;
+}
+
+#dynamic-form .dicaTexto {
+  position: absolute;
+  visibility: hidden;
+  font-size: 13px;
+  width: 396px;
+  background: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  bottom: 43%;
+  left: 36%;
+  margin-left: -100px;
+  margin-bottom: 5px;
+}
+
+#dynamic-form .dicaTexto:after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+#dynamic-form .card-header-template {
+  box-shadow: 0 3px 5px 2px rgb(0 0 0 / 10%);
+}
+
+#dynamic-form .container-form {
+  padding: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  border-left-width: 0.25rem;
+  border-radius: 0.25rem;
+  border-left-color: #21b2f0;
+  background-color: #f7f7f7;
+}
+/************************* TEMPLATEVIEW ******************************/
+
+#templateViewForm .remove_field {
+  max-height: 38px;
+}
+
+#templateViewForm .pointer {
+  cursor: pointer;
+}
+
+#templateViewForm .box-form-group {
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#templateViewForm .groupHeader {
+  line-height: inherit;
+}
+
+#templateViewForm .checkbox {
+  float: right;
+  margin-left: 5px;
+  appearance: unset;
+  -webkit-appearance: unset;
+  position: relative;
+  width: 45px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+#templateViewForm .checkbox:checked {
+  background-color: #3498db;
+}
+
+#templateViewForm .checkbox:checked::before {
+  left: 29px;
+}
+
+#templateViewForm .checkbox::before {
+  content: " ";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  top: 4px;
+  left: 4px;
+  transition: 0.3s linear;
+}
+
+#templateViewForm fieldset {
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+#templateViewForm .navbar-brand img {
+  max-height: 52px;
+}
+
+#templateViewForm .inputError {
+  border: 1px solid #dc3545 !important;
+}
+
+#templateViewForm label.error {
+  font-size: small;
+  color: red;
+}
+
+#templateViewForm .modal-confirm {
+  color: #636363;
+  width: 325px;
+  font-size: 14px;
+}
+
+#templateViewForm .modal-confirm .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+#templateViewForm .modal-confirm .modal-header {
+  border-bottom: none;
+  position: relative;
+}
+
+#templateViewForm .modal-confirm h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 10px 0 -15px;
+}
+
+#templateViewForm .modal-confirm .form-control,
+.modal-confirm .btn {
+  min-height: 40px;
+  border-radius: 3px;
+}
+
+#templateViewForm .modal-confirm .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+#templateViewForm .modal-confirm .modal-footer {
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+#templateViewForm .modal-confirm .icon-box {
+  color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #82ce34;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+#templateViewForm .modal-confirm .icon-box i {
+  font-size: 58px;
+  position: relative;
+  top: 3px;
+}
+
+#templateViewForm .modal-confirm.modal-dialog {
+  margin-top: 80px;
+}
+
+#templateViewForm .modal-confirm .btn {
+  color: #fff;
+  border-radius: 4px;
+  background: #82ce34;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border: none;
+}
+
+#templateViewForm .modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+  background: #6fb32b;
+  outline: none;
+}
+
+#templateViewForm .trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+#templateViewForm .btn-outline-primary {
+  color: #009fdf !important;
+  border-color: #009fdf !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#templateViewForm .btn-outline-primary:hover {
+  background-color: #009fdf !important;
+  color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#templateViewForm .btn-primary {
+  background-color: #009fdf;
+  border-color: #009fdf;
+}
+
+#templateViewForm legend {
+  padding-top: 38px;
+  margin-bottom: 0;
+  color: #009fdf;
+}
+
+#templateViewForm hr {
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-top: 1px solid #009fdf;
+}
+
+#templateViewForm label h4 {
+  color: black;
+}
+
+#templateViewForm fieldset > fieldset > legend {
+  padding-top: 0;
+}
+
+#templateViewForm fieldset > fieldset > .groupHeader {
+  padding-top: 0;
+}
+
+#templateViewForm fieldset > fieldset {
+  padding-top: 0;
+  margin-top: 5px;
+}
+
+#templateViewForm fieldset {
+  background: #f7f7f7;
+}
+
+#templateViewForm .container-form1 {
+  border-left-width: 5px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 4px 40px 40px 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  /*border: 1px solid #eee;*/
+  border-left-color: #21b2f0;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  box-shadow: 0 2px 10px -1px #bdbdbd;
+}
+
+#templateViewForm textarea.form-control {
+  height: 86px;
+}
+
+#templateViewForm .table-wrapper {
+  min-width: 600px;
+  margin: 0px auto;
+  background: #fff;
+  /*padding: 5px;*/
+  /*box-shadow: 0 1px 1px rgb(0 0 0 !* 5%*!);*/
+}
+
+#templateViewForm .table-title .add-new {
+  float: right;
+  height: 30px;
+  font-weight: bold;
+  font-size: 12px;
+  text-shadow: none;
+  min-width: 100px;
+  border-radius: 50px;
+  line-height: 13px;
+}
+
+#templateViewForm .table-title .add-new i {
+  margin-right: 4px;
+}
+
+#templateViewForm .table-scroll table {
+  width: 100%;
+  /*    min-width: 640px;*/
+  margin: auto;
+  border-top: 0px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#templateViewForm th:last-child {
+  /*border-collapse: separate;*/
+  /*border-spacing: 0;*/
+  //position: -webkit-sticky;
+  position: sticky;
+  right: 0px;
+  /*z-index: 2;*/
+  background: #fff;
+  width: 100px !important;
+}
+
+#templateViewForm table.table,
+table.table tr td {
+  /*border-color: #e9e9e9;*/
+  /*border-right: 0px !important;*/
+  text-align: center;
+  vertical-align: middle;
+}
+
+#templateViewForm .table thead th {
+  border: 1px solid #dee2e6 !important;
+}
+
+#templateViewForm .iconAction {
+  color: #7e7e7e !important;
+  background: #f2f2f2;
+  cursor: pointer;
+  font-size: 20px !important;
+  border: 1px solid #d3d3d3;
+  border-radius: 100%;
+  padding: 3px;
+  /*margin-bottom: 9px;*/
+}
+
+#templateViewForm .edit {
+  margin-right: 10px;
+}
+
+#templateViewForm input[type="file"] {
+  border: 1.2px dashed;
+  border-color: #009fdf;
+}
+
+#templateViewForm #target input[type$="file"]:before,
+.recebeModals input[type$="file"]:before {
+  font-family: "FontAwesome";
+  content: "\f002  Arquivo";
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  justify-content: center;
+}
+
+#templateViewForm .table-responsive {
+  max-height: 300px;
+}
+
+#templateViewForm thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white;
+}
+
+.Title {
+  color: $primary;
+}
+/* gradient text for modern browsers */
+@supports (background-clip: text) {
+  .Title {
+    background-image: linear-gradient(to right, $teal, $teal, $yellow 75%);
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.IconTitle {
+  color: $darkBlue;
+}
+
+.navbar-brand:hover {
+  color: $primary;
+}

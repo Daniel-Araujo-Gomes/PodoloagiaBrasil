@@ -1,0 +1,77 @@
+<form action="" class="container" autocomplete="off">
+  <div class="row">
+    <div class="col-12">
+      <label class="text-secondary fw-bolder ms-2 mb-1 text-uppercase">DADOS DE ACESSO</label>
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <div class="d-flex align-items-center mb-2">
+          <div class="rounded-circle bg-teal _iconInputCircle d-flex align-items-center justify-content-center me-2">
+            <i class="fa-solid fa-envelope text-white _iconInput"></i>
+          </div>
+          <input type="email" name="email" id="email" class="_input fs-6" placeholder="Informe seu e-mail" autocomplete="off" />
+        </div>
+        <hr />
+        <div class="d-flex align-items-center mt-2 mb-2">
+          <div class="rounded-circle bg-teal _iconInputCircle d-flex align-items-center justify-content-center me-2">
+            <i class="fa-solid fa-lock text-white _iconInput"></i>
+          </div>
+          <input type="password" name="senha" id="senha" class="_input fs-6" placeholder="Informe sua senha" autocomplete="off" />
+        </div>
+        <hr />
+        <button type="button" class="btn btn-teal text-white col-12 mt-2 fw-bolder">Login</button>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <label class="text-secondary fw-bolder ms-2 mb-1 text-uppercase">PRIMEIRO ACESSO</label>
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <div class="d-flex align-items-center mb-1">
+          <label>Se você é novo por aqui...</label>
+        </div>
+        <hr />
+        <div class="d-flex align-items-center">
+          <button type="button" class="btn text-teal b-0 col-12 p-0 d-flex justify-content-between align-items-center mt-1" (click)="navigate('login/primeiroAcesso')">
+            <span><i class="fa-solid fa-address-card me-1"></i>Faça seu cadastro</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <label class="text-secondary fw-bolder ms-2 mb-1 text-uppercase">RECUPERAÇÃO DE SENHA </label>
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <div class="d-flex align-items-center mb-1">
+          <label>Esqueceu sua senha?</label>
+        </div>
+        <hr />
+        <div class="d-flex align-items-center">
+          <button type="button" class="btn text-teal b-0 col-12 p-0 d-flex justify-content-between align-items-center mt-1" (click)="navigate('login/recuperarSenha')">
+            <span><i class="fa-solid fa-unlock-keyhole me-1"></i>Recuperar Senha</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <label class="text-secondary ms-2 mt-1">As instruções serão enviadas para o seu e-mail.</label>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12 mb-3">
+      <label class="text-secondary fw-bolder ms-2 mb-1 text-uppercase">GRAVAR ATENDIMENTO </label>
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <div class="d-flex align-items-center mb-1">
+          <label>Registre seu atendimento</label>
+        </div>
+        <hr />
+        <div class="d-flex align-items-center">
+          <button type="button" class="btn text-teal b-0 col-12 p-0 d-flex justify-content-between align-items-center mt-1">
+            <span>Registrar</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <label class="text-secondary ms-2 mt-1">Registre para obter descontos incríveis.</label>
+    </div>
+  </div>
+</form>

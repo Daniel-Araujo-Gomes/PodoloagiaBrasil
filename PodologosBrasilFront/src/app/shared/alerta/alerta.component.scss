@@ -1,0 +1,23 @@
+.no-margin {
+  margin-bottom: 0;
+}
+
+.toast-show {
+  opacity: 1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border: none !important;
+  z-index: 1100;
+}
+
+.br-5 {
+  border-radius: 5px !important;
+}
+
+.toast:not(.show) {
+  display: inline-block !important;
+}
+
+._IconClose {
+  cursor: pointer !important;
+}

@@ -1,0 +1,158 @@
+* {
+  -webkit-touch-callout: none; /* iPhone OS, Safari */
+  -webkit-user-select: none; /* Chrome, Safari 3 */
+  -khtml-user-select: none; /* Safari 2 */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none; /* Possível implementação no futuro */
+}
+
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+form {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+//input {
+//  border-color: $gray-400 !important;
+//}
+
+//input:focus {
+//  border-color: $gray-400 !important;
+//  -webkit-box-shadow: none !important;
+//  box-shadow: none !important;
+//}
+
+button:focus {
+  // border-color: $gray-400 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+label > small {
+  margin-left: 5px;
+  color: $danger;
+}
+
+._body {
+  display: grid;
+  height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: auto;
+  grid-template-rows: 56px auto 30px;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+}
+
+._box-center {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+._box-left {
+  display: flex;
+  align-items: center !important;
+  justify-content: left !important;
+}
+
+._box-right {
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+._reticencia {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+._reticencia._max-150 {
+  max-width: 150px;
+}
+
+._container-not-justify {
+  justify-content: normal !important;
+}
+
+._btn-not-border {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+._poiter {
+  cursor: pointer;
+}
+
+._h100 {
+  height: 100% !important;
+}
+
+._w100 {
+  width: 100% !important;
+}
+
+._border-top {
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+}
+
+.modal-content {
+  border: none !important;
+}
+
+._iconForm {
+  font-size: 26px !important;
+}
+
+._iconList {
+  font-size: 26px !important;
+}
+
+._iconInput {
+  font-size: 12px !important;
+}
+
+._iconInputCircle {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+hr {
+  margin: 0 !important;
+  height: 1px !important;
+  border-width: 0 !important;
+  color: $gray-500 !important;
+  background-color: $gray-500 !important;
+}
+
+.btn:active {
+  outline: 0 !important;
+  border-color: transparent !important;
+}
+
+._fse-1 {
+  font-size: 2em !important;
+}
+
+._rotate-275 {
+  transform: rotate(275deg);
+}

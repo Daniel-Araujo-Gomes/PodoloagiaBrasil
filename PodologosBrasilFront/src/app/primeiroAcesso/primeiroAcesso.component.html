@@ -1,0 +1,80 @@
+<form action="" class="container" autocomplete="off">
+  <div class="row">
+    <div class="col-12">
+      <label class="text-secondary fw-bolder ms-2 mb-1 text-uppercase">DADOS PESSOAIS</label>
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <div class="d-flex align-items-center mb-2">
+          <div class="rounded-circle bg-teal _iconInputCircle d-flex align-items-center justify-content-center me-2">
+            <i class="fa-solid fa-user text-white _iconInput"></i>
+          </div>
+          <input type="text" name="nome" id="nome" class="_input fs-6" placeholder="Informe seu nome" autocomplete="off" />
+        </div>
+        <hr />
+        <div class="d-flex align-items-center mt-2 mb-2">
+          <div class="rounded-circle bg-teal _iconInputCircle d-flex align-items-center justify-content-center me-2">
+            <i class="fa-solid fa-credit-card text-white _iconInput"></i>
+          </div>
+          <input type="text" name="cpf" id="cpf" class="_input fs-6" placeholder="Informe sua CPF" autocomplete="off" />
+        </div>
+      </div>
+      <label class="text-secondary ms-2 mt-1">Estas informações são confidenciais e protegidas.</label>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <label class="text-secondary fw-bolder ms-2 mb-1 text-uppercase">DADOS DE ACESSO</label>
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <div class="d-flex align-items-center mb-2">
+          <div class="rounded-circle bg-teal _iconInputCircle d-flex align-items-center justify-content-center me-2">
+            <i class="fa-solid fa-envelope text-white _iconInput"></i>
+          </div>
+          <input type="email" name="email" id="email" class="_input fs-6" placeholder="Informe seu e-mail" autocomplete="off" />
+        </div>
+        <hr />
+        <div class="d-flex align-items-center mt-2 mb-2">
+          <div class="rounded-circle bg-teal _iconInputCircle d-flex align-items-center justify-content-center me-2">
+            <i class="fa-solid fa-lock text-white _iconInput"></i>
+          </div>
+          <input type="password" name="senha" id="senha" class="_input fs-6" placeholder="Informe sua senha" autocomplete="off" />
+          <i class="fa-solid fa-eye-slash text-secondary"></i>
+        </div>
+        <hr />
+        <div class="d-flex align-items-center mt-2 mb-2">
+          <div class="rounded-circle bg-teal _iconInputCircle d-flex align-items-center justify-content-center me-2">
+            <i class="fa-solid fa-lock text-white _iconInput"></i>
+          </div>
+          <input type="password" name="confirmaSenha" id="confirmaSenha" class="_input fs-6" placeholder="Confirma a senha" autocomplete="off" />
+          <i class="fa-solid fa-eye-slash text-secondary"></i>
+        </div>
+      </div>
+      <label class="text-secondary ms-2 mt-1">informações usadas para fazer seu login.</label>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12">
+      <label class="text-secondary fw-bolder ms-2 mb-1 text-uppercase">APENAS PARA PODÓLOGOS</label>
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <div class="d-flex align-items-center mb-1">
+          <label>Você é profissional de podologia e deseja estar na lista dos melhores profissionais do mercado?</label>
+        </div>
+        <hr />
+        <div class="d-flex align-items-center">
+          <div class="btn b-0 col-12 p-0 d-flex justify-content-between align-items-center mt-1">
+            <label for="interesse">Tenho Interesse</label>
+            <input type="checkbox" class="_checkbox" name="interesse" id="interesse" />
+          </div>
+        </div>
+      </div>
+      <label class="text-secondary ms-2 mt-1">Mais informações serão enviadas por e-mail.</label>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12 mb-3">
+      <div class="d-flex flex-column bg-white p-2 rounded">
+        <button type="button" class="btn btn-teal text-white col-12 fw-bolder">Salvar</button>
+      </div>
+    </div>
+  </div>
+</form>

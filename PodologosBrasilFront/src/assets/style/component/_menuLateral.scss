@@ -1,0 +1,78 @@
+
+$component-name: '_menu-lateral';
+
+.#{$component-name} {
+  grid-area: menuLateral;
+  overflow: hidden;
+  overflow-y: auto;
+  ul {
+    li {
+      max-width: 100% !important;
+    }
+
+    li:not(:last-child) {
+      border-bottom: solid 1px $gray-200 ;
+    }
+
+    li ._menuLateral-itens {
+      display: grid !important;
+      width: 100%;
+      max-width: 100% !important;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      //color: $primary;
+      grid-template-rows: 41px;
+      grid-auto-columns: 5px 25px auto 25px;
+      grid-template-areas:
+          "espaco menuLateralItemIcone menuLateralItemTitulo menuLateralItemIndicador";
+
+      &._title > div {
+        color: $primary !important;
+      }
+
+      &._subtitle > div {
+        color: $gray-600 !important;
+      }
+    }
+
+    li ._menuLateral-itens ._menuLateralItemIcone {
+      grid-area: menuLateralItemIcone;
+      height: 100%;
+    }
+
+    li ._menuLateral-itens ._menuLateralItemIcone fa-icon {
+      font-size: 18px !important;
+    }
+
+    li ._menuLateral-itens ._menuLateralItemIcone mat-icon {
+      font-size: 18px !important;
+    }
+
+    li ._menuLateral-itens ._menuLateralItemTitulo {
+      grid-area: menuLateralItemTitulo;
+      height: 100%;
+    }
+
+    li ._menuLateral-itens ._menuLateralItemTitulo span {
+      font-size: 12px;
+    }
+
+    li ._menuLateral-itens ._menuLateralItemTitulo a {
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      font-variant-caps: normal;
+      text-transform: uppercase;
+    }
+
+    li ._menuLateral-itens ._menuLateralItemIndicador{
+      grid-area: menuLateralItemIndicador;
+      height: 100%;
+    }
+
+  }
+
+}

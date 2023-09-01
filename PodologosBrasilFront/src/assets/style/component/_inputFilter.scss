@@ -1,0 +1,7 @@
+$component-name: '_input-filter';
+
+.#{$component-name} {
+  width: 100%;
+  border: 0;
+  border-bottom: dotted 1px $primary;
+}

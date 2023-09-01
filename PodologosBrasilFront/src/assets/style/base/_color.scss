@@ -1,0 +1,601 @@
+// Color system
+
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start teal-color-variables
+$teal-100: #b2dfdb !default;
+$teal-200: #80cbc4 !default;
+$teal-300: #4db6ac !default;
+$teal-400: #26a69a !default;
+$teal-500: #009688 !default;
+$teal-600: #00897b !default;
+$teal-700: #00796b !default;
+$teal-800: #00695c !default;
+$teal-900: #004d40 !default;
+// scss-docs-end teal-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #009688 !default;
+$cyan: #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "black": $black,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800,
+) !default;
+// scss-docs-end colors-map
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 4.5 !default;
+
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark: $black !default;
+$color-contrast-light: $white !default;
+
+// fusv-disable
+$blue-100: tint-color($blue, 80%) !default;
+$blue-200: tint-color($blue, 60%) !default;
+$blue-300: tint-color($blue, 40%) !default;
+$blue-400: tint-color($blue, 20%) !default;
+$blue-500: $blue !default;
+$blue-600: shade-color($blue, 20%) !default;
+$blue-700: shade-color($blue, 40%) !default;
+$blue-800: shade-color($blue, 60%) !default;
+$blue-900: shade-color($blue, 80%) !default;
+
+$indigo-100: tint-color($indigo, 80%) !default;
+$indigo-200: tint-color($indigo, 60%) !default;
+$indigo-300: tint-color($indigo, 40%) !default;
+$indigo-400: tint-color($indigo, 20%) !default;
+$indigo-500: $indigo !default;
+$indigo-600: shade-color($indigo, 20%) !default;
+$indigo-700: shade-color($indigo, 40%) !default;
+$indigo-800: shade-color($indigo, 60%) !default;
+$indigo-900: shade-color($indigo, 80%) !default;
+
+$purple-100: tint-color($purple, 80%) !default;
+$purple-200: tint-color($purple, 60%) !default;
+$purple-300: tint-color($purple, 40%) !default;
+$purple-400: tint-color($purple, 20%) !default;
+$purple-500: $purple !default;
+$purple-600: shade-color($purple, 20%) !default;
+$purple-700: shade-color($purple, 40%) !default;
+$purple-800: shade-color($purple, 60%) !default;
+$purple-900: shade-color($purple, 80%) !default;
+
+$pink-100: tint-color($pink, 80%) !default;
+$pink-200: tint-color($pink, 60%) !default;
+$pink-300: tint-color($pink, 40%) !default;
+$pink-400: tint-color($pink, 20%) !default;
+$pink-500: $pink !default;
+$pink-600: shade-color($pink, 20%) !default;
+$pink-700: shade-color($pink, 40%) !default;
+$pink-800: shade-color($pink, 60%) !default;
+$pink-900: shade-color($pink, 80%) !default;
+
+$red-100: tint-color($red, 80%) !default;
+$red-200: tint-color($red, 60%) !default;
+$red-300: tint-color($red, 40%) !default;
+$red-400: tint-color($red, 20%) !default;
+$red-500: $red !default;
+$red-600: shade-color($red, 20%) !default;
+$red-700: shade-color($red, 40%) !default;
+$red-800: shade-color($red, 60%) !default;
+$red-900: shade-color($red, 80%) !default;
+
+$orange-100: tint-color($orange, 80%) !default;
+$orange-200: tint-color($orange, 60%) !default;
+$orange-300: tint-color($orange, 40%) !default;
+$orange-400: tint-color($orange, 20%) !default;
+$orange-500: $orange !default;
+$orange-600: shade-color($orange, 20%) !default;
+$orange-700: shade-color($orange, 40%) !default;
+$orange-800: shade-color($orange, 60%) !default;
+$orange-900: shade-color($orange, 80%) !default;
+
+$yellow-100: tint-color($yellow, 80%) !default;
+$yellow-200: tint-color($yellow, 60%) !default;
+$yellow-300: tint-color($yellow, 40%) !default;
+$yellow-400: tint-color($yellow, 20%) !default;
+$yellow-500: $yellow !default;
+$yellow-600: shade-color($yellow, 20%) !default;
+$yellow-700: shade-color($yellow, 40%) !default;
+$yellow-800: shade-color($yellow, 60%) !default;
+$yellow-900: shade-color($yellow, 80%) !default;
+
+$green-100: tint-color($green, 80%) !default;
+$green-200: tint-color($green, 60%) !default;
+$green-300: tint-color($green, 40%) !default;
+$green-400: tint-color($green, 20%) !default;
+$green-500: $green !default;
+$green-600: shade-color($green, 20%) !default;
+$green-700: shade-color($green, 40%) !default;
+$green-800: shade-color($green, 60%) !default;
+$green-900: shade-color($green, 80%) !default;
+
+$teal-100: tint-color($teal, 80%) !default;
+$teal-200: tint-color($teal, 60%) !default;
+$teal-300: tint-color($teal, 40%) !default;
+$teal-400: tint-color($teal, 20%) !default;
+$teal-500: $teal !default;
+$teal-600: shade-color($teal, 20%) !default;
+$teal-700: shade-color($teal, 40%) !default;
+$teal-800: shade-color($teal, 60%) !default;
+$teal-900: shade-color($teal, 80%) !default;
+
+$cyan-100: tint-color($cyan, 80%) !default;
+$cyan-200: tint-color($cyan, 60%) !default;
+$cyan-300: tint-color($cyan, 40%) !default;
+$cyan-400: tint-color($cyan, 20%) !default;
+$cyan-500: $cyan !default;
+$cyan-600: shade-color($cyan, 20%) !default;
+$cyan-700: shade-color($cyan, 40%) !default;
+$cyan-800: shade-color($cyan, 60%) !default;
+$cyan-900: shade-color($cyan, 80%) !default;
+
+$blues: (
+  "blue-100": $blue-100,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
+  "blue-500": $blue-500,
+  "blue-600": $blue-600,
+  "blue-700": $blue-700,
+  "blue-800": $blue-800,
+  "blue-900": $blue-900,
+) !default;
+
+$indigos: (
+  "indigo-100": $indigo-100,
+  "indigo-200": $indigo-200,
+  "indigo-300": $indigo-300,
+  "indigo-400": $indigo-400,
+  "indigo-500": $indigo-500,
+  "indigo-600": $indigo-600,
+  "indigo-700": $indigo-700,
+  "indigo-800": $indigo-800,
+  "indigo-900": $indigo-900,
+) !default;
+
+$purples: (
+  "purple-100": $purple-100,
+  "purple-200": $purple-200,
+  "purple-300": $purple-300,
+  "purple-400": $purple-400,
+  "purple-500": $purple-500,
+  "purple-600": $purple-600,
+  "purple-700": $purple-700,
+  "purple-800": $purple-800,
+  "purple-900": $purple-900,
+) !default;
+
+$pinks: (
+  "pink-100": $pink-100,
+  "pink-200": $pink-200,
+  "pink-300": $pink-300,
+  "pink-400": $pink-400,
+  "pink-500": $pink-500,
+  "pink-600": $pink-600,
+  "pink-700": $pink-700,
+  "pink-800": $pink-800,
+  "pink-900": $pink-900,
+) !default;
+
+$reds: (
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900,
+) !default;
+
+$oranges: (
+  "orange-100": $orange-100,
+  "orange-200": $orange-200,
+  "orange-300": $orange-300,
+  "orange-400": $orange-400,
+  "orange-500": $orange-500,
+  "orange-600": $orange-600,
+  "orange-700": $orange-700,
+  "orange-800": $orange-800,
+  "orange-900": $orange-900,
+) !default;
+
+$yellows: (
+  "yellow-100": $yellow-100,
+  "yellow-200": $yellow-200,
+  "yellow-300": $yellow-300,
+  "yellow-400": $yellow-400,
+  "yellow-500": $yellow-500,
+  "yellow-600": $yellow-600,
+  "yellow-700": $yellow-700,
+  "yellow-800": $yellow-800,
+  "yellow-900": $yellow-900,
+) !default;
+
+$greens: (
+  "green-100": $green-100,
+  "green-200": $green-200,
+  "green-300": $green-300,
+  "green-400": $green-400,
+  "green-500": $green-500,
+  "green-600": $green-600,
+  "green-700": $green-700,
+  "green-800": $green-800,
+  "green-900": $green-900,
+) !default;
+
+$teals: (
+  "teal-100": $teal-100,
+  "teal-200": $teal-200,
+  "teal-300": $teal-300,
+  "teal-400": $teal-400,
+  "teal-500": $teal-500,
+  "teal-600": $teal-600,
+  "teal-700": $teal-700,
+  "teal-800": $teal-800,
+  "teal-900": $teal-900,
+) !default;
+
+$cyans: (
+  "cyan-100": $cyan-100,
+  "cyan-200": $cyan-200,
+  "cyan-300": $cyan-300,
+  "cyan-400": $cyan-400,
+  "cyan-500": $cyan-500,
+  "cyan-600": $cyan-600,
+  "cyan-700": $cyan-700,
+  "cyan-800": $cyan-800,
+  "cyan-900": $cyan-900,
+) !default;
+// fusv-enable
+
+// scss-docs-start theme-color-variables
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $teal-600 !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "teal": $teal,
+) !default;
+// scss-docs-end theme-colors-map
+//---------------------------------------------------
+
+$main-bg: #f4f3ef !default;
+$card-border: #252422 !default;
+$box-shadow: rgb(0 0 0 / 15%) !default;
+$red-bg: #ff000017 !default;
+$yellow-bg: #ffff0017 !default;
+$green-bg: #00800017 !default;
+$blue-bg: #00b5d317 !default;
+$gray-150: #eeeeee !default;
+$darkBlue: #002949 !default;
+
+._bg-danger {
+  background-color: $red-bg;
+}
+
+._bg-warning {
+  background-color: $yellow-bg;
+}
+
+._bg-success {
+  background-color: $green-bg;
+}
+
+._bg-primary {
+  background-color: $blue-bg;
+}
+
+._bg-gray1 {
+  background-color: $gray-100 !important;
+}
+._fc-gray1 {
+  color: $gray-100;
+}
+
+._bg-gray15 {
+  background-color: $gray-150 !important;
+}
+._fc-gray15 {
+  color: $gray-150;
+}
+
+._bg-gray2 {
+  background-color: $gray-200 !important;
+}
+._fc-gray2 {
+  color: $gray-200;
+}
+
+._bg-gray3 {
+  background-color: $gray-300 !important;
+}
+._fc-gray3 {
+  color: $gray-300;
+}
+
+._bg-gray4 {
+  background-color: $gray-400 !important;
+}
+._fc-gray4 {
+  color: $gray-400;
+}
+
+._bg-gray5 {
+  background-color: $gray-500 !important;
+}
+._fc-gray5 {
+  color: $gray-500;
+}
+
+._bg-gray6 {
+  background-color: $gray-600 !important;
+}
+._fc-gray6 {
+  color: $gray-600;
+}
+
+._bg-gray7 {
+  background-color: $gray-700 !important;
+}
+._fc-gray7 {
+  color: $gray-700;
+}
+
+._bg-gray8 {
+  background-color: $gray-800 !important;
+}
+._fc-gray8 {
+  color: $gray-800;
+}
+
+._bg-gray9 {
+  background-color: $gray-900 !important;
+}
+._fc-gray9 {
+  color: $gray-900;
+}
+
+._bg-white {
+  background-color: $white !important;
+}
+._fc-white {
+  color: $white !important;
+}
+
+._bg-black {
+  background-color: $black !important;
+}
+._fc-black {
+  color: $black;
+}
+
+._border-primary {
+  border-color: $primary !important;
+}
+._border-left-primary {
+  border-left-color: $primary !important;
+}
+._border-rigt-primary {
+  border-right-color: $primary !important;
+}
+._border-bottom-primary {
+  border-bottom-color: $primary !important;
+}
+._border-top-primary {
+  border-top-color: $primary !important;
+}
+
+._border-secundary {
+  border-color: $secondary !important;
+}
+._border-left-secondary {
+  border-left-color: $secondary !important;
+}
+._border-rigt-secondary {
+  border-right-color: $secondary !important;
+}
+._border-bottom-secondary {
+  border-bottom-color: $secondary !important;
+}
+._border-top-secondary {
+  border-top-color: $secondary !important;
+}
+
+._border-success {
+  border-color: $success !important;
+}
+._border-left-success {
+  border-left-color: $success !important;
+}
+._border-rigt-primary {
+  border-right-color: $success !important;
+}
+._border-bottom-primary {
+  border-bottom-color: $success !important;
+}
+._border-top-primary {
+  border-top-color: $success !important;
+}
+
+._border-info {
+  border-color: $info !important;
+}
+._border-left-info {
+  border-left-color: $info !important;
+}
+._border-rigt-info {
+  border-right-color: $info !important;
+}
+._border-bottom-info {
+  border-bottom-color: $info !important;
+}
+._border-top-info {
+  border-top-color: $info !important;
+}
+
+._border-warning {
+  border-color: $warning !important;
+}
+._border-left-warning {
+  border-left-color: $warning !important;
+}
+._border-rigt-warning {
+  border-right-color: $warning !important;
+}
+._border-bottom-warning {
+  border-bottom-color: $warning !important;
+}
+._border-top-warning {
+  border-top-color: $warning !important;
+}
+
+._border-danger {
+  border-color: $danger !important;
+}
+._border-left-danger {
+  border-left-color: $danger !important;
+}
+._border-rigt-danger {
+  border-right-color: $danger !important;
+}
+._border-bottom-danger {
+  border-bottom-color: $danger !important;
+}
+._border-top-danger {
+  border-top-color: $danger !important;
+}
+
+._border-light {
+  border-color: $light !important;
+}
+._border-left-light {
+  border-left-color: $light !important;
+}
+._border-rigt-light {
+  border-right-color: $light !important;
+}
+._border-bottom-light {
+  border-bottom-color: $light !important;
+}
+._border-top-light {
+  border-top-color: $light !important;
+}
+
+._border-dark {
+  border-color: $dark !important;
+}
+._border-left-dark {
+  border-left-color: $dark !important;
+}
+._border-rigt-dark {
+  border-right-color: $dark !important;
+}
+._border-bottom-dark {
+  border-bottom-color: $dark !important;
+}
+._border-top-dark {
+  border-top-color: $dark !important;
+}
+
+._border-gray-1 {
+  border-color: $gray-100 !important;
+}
+._border-left-gray-1 {
+  border-left-color: $gray-100 !important;
+}
+._border-rigt-gray-1 {
+  border-right-color: $gray-100 !important;
+}
+._border-bottom-gray-1 {
+  border-bottom-color: $gray-100 !important;
+}
+._border-top-gray-1 {
+  border-top-color: $gray-100 !important;
+}
+
+._border-gray-1-5 {
+  border-color: $gray-150 !important;
+}
+._border-left-gray-1-5 {
+  border-left-color: $gray-150 !important;
+}
+._border-rigt-gray-1-5 {
+  border-right-color: $gray-150 !important;
+}
+._border-bottom-gray-1-5 {
+  border-bottom-color: $gray-150 !important;
+}
+._border-top-gray-1-5 {
+  border-top-color: $gray-150 !important;
+}

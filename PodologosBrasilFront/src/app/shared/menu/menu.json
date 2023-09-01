@@ -1,0 +1,42 @@
+[
+  {
+    "icone": "fa-solid fa-calendar-days",
+    "iconeColor": "text-teal",
+    "nome": "AGENDA",
+    "nomeColor": "text-teal",
+    "seta": "",
+    "setaColor": "",
+    "modulo": "calendario",
+    "route": ""
+  },
+  {
+    "icone": "fa-solid fa-money-bill-trend-up",
+    "iconeColor": "text-teal",
+    "nome": "FATURAMENTO",
+    "nomeColor": "text-teal",
+    "seta": "",
+    "setaColor": "",
+    "modulo": "calendario",
+    "route": ""
+  },
+  {
+    "icone": "fa-solid fa-user",
+    "iconeColor": "text-teal",
+    "nome": "USUÁRIOS",
+    "nomeColor": "text-teal",
+    "seta": "",
+    "setaColor": "",
+    "modulo": "calendario",
+    "route": ""
+  },
+  {
+    "icone": "fa-solid fa-power-off",
+    "iconeColor": "text-danger",
+    "nome": "LOGOUT",
+    "nomeColor": "text-teal",
+    "seta": "",
+    "setaColor": "",
+    "modulo": "calendario",
+    "route": ""
+  }
+]

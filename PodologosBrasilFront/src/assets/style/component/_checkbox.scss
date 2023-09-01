@@ -1,0 +1,33 @@
+$component-name: "_checkbox";
+
+.#{$component-name} {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 45px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+
+  &:checked {
+    background-color: #3498db;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    top: 4px;
+    left: 4px;
+    transition: 0.3s linear;
+  }
+
+  &:checked::before {
+    left: 29px;
+  }
+}
